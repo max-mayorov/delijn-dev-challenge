@@ -126,6 +126,13 @@ export default function Home() {
               key={bus.bus}
             >
               {bus.bus}{" "}
+              <button
+                onClick={() => {
+                  setBussen(bussen.filter((b) => b.bus !== bus.bus));
+                }}
+              >
+                [X]
+              </button>
             </div>
           ))}
         </div>
